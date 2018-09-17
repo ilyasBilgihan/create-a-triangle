@@ -58,14 +58,14 @@
 			var parentHeight = c * Math.sin(degreeBtoC / (180 / Math.PI));
 			$('#triangle').css({'width': b + 'px','height': parentHeight + 'px'});
 
-			$('.edge.one').css({'width': a + 'px','transform': 'rotate(-'+degreeBtoA+'deg)','opacity': ''});
+			$('.edge.one').css({'width': a + 'px','transform': 'rotate(-'+degreeBtoA+'deg)'});
 			$('.edge.two').css('width', b + 'px');
 			$('.edge.three').css({'width': c + 'px','transform': 'rotate('+degreeBtoC+'deg)'});
 
 			$('.edge.one').attr('data-length', a / 40);
-			$('.edge.one span').css('transform', 'translate(50%,-50%) rotate('+degreeBtoA+'deg)');
 			$('.edge.two').attr('data-length', b / 40);
 			$('.edge.three').attr('data-length', c / 40);
+			$('.edge.one span').css('transform', 'translate(50%,-50%) rotate('+degreeBtoA+'deg)');
 			$('.edge.three span').css('transform', 'translate(50%,-50%) rotate(-'+degreeBtoC+'deg)');
 
 			$('#triangle .edge').addClass('show');
