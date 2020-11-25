@@ -47,7 +47,7 @@
 			setTimeout(function(){ $('#info span.warning').removeClass('show'); }, 2000);
 
 		}else {
-			a = a * 40;
+			a = a * 40; // 40 = DPI / 2.54 (1366x768:15.6" screen = 100 DPI)
 			b = b * 40;
 			c = c * 40;
 			
