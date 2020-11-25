@@ -51,9 +51,9 @@
 			b = b * 40;
 			c = c * 40;
 			
-			var degreeBtoA = toDegrees( Math.acos( ( kare(c) - kare(a) - kare(b) ) / ( -2 * ( a * b ) ) ) );
-			var degreeBtoC = toDegrees( Math.acos( ( kare(a) - kare(c) - kare(b) ) / ( -2 * ( c * b ) ) ) );
-			var degreeAtoC = toDegrees( Math.acos( ( kare(b) - kare(c) - kare(a) ) / ( -2 * ( c * a ) ) ) );
+			var degreeBtoA = toDegrees( Math.acos( ( (c**c) - (a**a) - (b**b) ) / ( -2 * ( a * b ) ) ) );
+			var degreeBtoC = toDegrees( Math.acos( ( (a**a) - (c**c) - (b**b) ) / ( -2 * ( c * b ) ) ) );
+			var degreeAtoC = toDegrees( Math.acos( ( (b**b) - (c**c) - (b**b) ) / ( -2 * ( c * a ) ) ) );
 
 			var parentHeight = c * Math.sin(degreeBtoC / (180 / Math.PI));
 			$('#triangle').css({'width': b + 'px','height': parentHeight + 'px'});
@@ -80,10 +80,6 @@
 			
 		}
 
-	}
-
-	function kare(x){
-		return Math.pow(x, 2);
 	}
 
 	function toDegrees (angle) {
